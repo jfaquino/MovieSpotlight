@@ -1,0 +1,100 @@
+﻿@model DiplomadoMVC.Data.Pelicula
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div class="flex">
+
+
+    <div class="form-horizontal">
+        <h4>Pelicula</h4>
+        <hr />
+        <dl class="dl-horizontal">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Titulo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Anio)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Anio)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Descripcion)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Sinopsis)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Sinopsis)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Precio)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Precio)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Puntuacion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Puntuacion)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Formato.Nombre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Formato.Nombre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Genero.Nombre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Genero.Nombre)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+    <div class="foto-pelicula">
+        <figure>
+            <img alt="@Model.Foto" src="/Images/@Model.Foto" />
+            <figcaption>Foto actual</figcaption>
+        </figure>
+    </div>
+</div>

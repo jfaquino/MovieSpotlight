@@ -1,0 +1,89 @@
+﻿@model DiplomadoMVC.Data.Pelicula
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<div class="flex">
+
+    <div class="form-horizontal">
+        <h4>Pelicula</h4>
+        <hr />
+        <dl class="dl-horizontal">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Titulo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Anio)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Anio)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Descripcion)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Sinopsis)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Sinopsis)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Precio)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Precio)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Puntuacion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Puntuacion)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Formato.Nombre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Formato.Nombre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Genero.Nombre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Genero.Nombre)
+            </dd>
+        </dl>
+    </div>
+    <div class="foto-pelicula">
+        <figure>
+            <img alt="@Model.Foto" src="/Images/@Model.Foto" />
+            <figcaption>Foto actual</figcaption>
+        </figure>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
